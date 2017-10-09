@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ext_net",
+    "id": "6a557676-969b-4fa7-8ce5-231c845a3e0d",
+    "category": "networking",
+    "icon": "images/editor/Network_External.png"
+  },
+  {
+    "name": "HD-VIDEO",
+    "id": "70d66d75-2ca6-4331-a9f5-f49179383d3e",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  },
+  {
+    "name": "HD-VIDEO",
+    "id": "f23adbb7-ba49-4f1b-a20c-96c607cb6e2c",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  },
+  {
+    "name": "HD-VIDEO",
+    "id": "c25bf9be-acda-4947-9af2-3a3f77e2afc3",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  },
+  {
+    "name": "internal_net",
+    "id": "39ac843d-5ac0-4ada-a849-c8af095f4c41",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  },
+  {
+    "name": "management-network",
+    "id": "8201c737-9204-4a73-a01f-94b50ff88704",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  },
+  {
+    "name": "red_network",
+    "id": "0bad11a1-97b7-4116-ac87-11c756c2a464",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  },
+  {
+    "name": "VIDEO",
+    "id": "2fc41d78-c08a-4833-b833-037cfd09a581",
+    "category": "networking",
+    "icon": "images/editor/Network_Internal.png"
+  }
+]

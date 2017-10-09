@@ -1,0 +1,485 @@
+{
+    "name": "onboard VNF Package",
+    "description": "creates component and application from templates",
+    "rootActivity": {
+        "edges": [
+            {
+                "to": "deleteApp",
+                "from": "createVNFComponent",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "Pull VNF Archive",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "1778ac6b1aa6fca19175e5954179dc",
+                "from": "Load Operations",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "1778ac6b1aa6fca19175e5954179dc",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "1778ac6b1aa6fca19175e5954179dc",
+                "from": "addOrchestrationEnvironment",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "Pull VNF Archive",
+                "from": "pull archive?",
+                "type": "VALUE",
+                "value": "true"
+            },
+            {
+                "to": "pull archive?",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "addOrchestrationEnvironment",
+                "from": "createVNFComponent",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "doesAppExist",
+                "from": "pull archive?",
+                "type": "VALUE",
+                "value": "false"
+            },
+            {
+                "to": "1778ac6b1aa6fca19175e5954179dc",
+                "from": "addAnsibleEnvironment",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "createApplication",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "createVNFComponent",
+                "from": "addAppTag",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "doesAppExist",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "Load Operations",
+                "from": "createVNFComponent",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "createApplication",
+                "from": "doesAppExist",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "doesAppExist",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "addAnsibleEnvironment",
+                "from": "isAnsible",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "addAppTag",
+                "from": "createApplication",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "doesAppExist",
+                "from": "Pull VNF Archive",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "isAnsible",
+                "from": "createVNFComponent",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "deleteApp",
+                "type": "ALWAYS",
+                "value": ""
+            }
+        ],
+        "offsets": [
+            {
+                "name": "pull archive?",
+                "x": -5,
+                "y": 150,
+                "h": 120,
+                "w": 400
+            },
+            {
+                "name": "Load Operations",
+                "x": 645,
+                "y": 1170,
+                "h": 120,
+                "w": 430
+            },
+            {
+                "name": "addAppTag",
+                "x": -110,
+                "y": 830,
+                "h": 120,
+                "w": 550
+            },
+            {
+                "name": "isAnsible",
+                "x": 355,
+                "y": 1170,
+                "h": 120,
+                "w": 260
+            },
+            {
+                "name": "7348e0e8364a549cbc0d3fe34c5914",
+                "x": 95,
+                "y": 1630,
+                "h": 100,
+                "w": 170
+            },
+            {
+                "name": "doesAppExist",
+                "x": -309.11805555555543,
+                "y": 490,
+                "h": 120,
+                "w": 600
+            },
+            {
+                "name": "deleteApp",
+                "x": -745,
+                "y": 1170,
+                "h": 120,
+                "w": 480
+            },
+            {
+                "name": "1778ac6b1aa6fca19175e5954179dc",
+                "x": 100,
+                "y": 1510,
+                "h": 70,
+                "w": 160
+            },
+            {
+                "name": "Pull VNF Archive",
+                "x": -10,
+                "y": 320,
+                "h": 120,
+                "w": 440
+            },
+            {
+                "name": "addAnsibleEnvironment",
+                "x": -100,
+                "y": 1340,
+                "h": 120,
+                "w": 560
+            },
+            {
+                "name": "createApplication",
+                "x": -5.986111111110972,
+                "y": 660,
+                "h": 120,
+                "w": 430
+            },
+            {
+                "name": "createVNFComponent",
+                "x": -110,
+                "y": 1000,
+                "h": 120,
+                "w": 550
+            },
+            {
+                "name": "addOrchestrationEnvironment",
+                "x": -235,
+                "y": 1170,
+                "h": 120,
+                "w": 560
+            }
+        ],
+        "layoutMode": "auto",
+        "type": "graph",
+        "name": "cd0b535f-b73f-4254-9cb6-5430b5010604",
+        "children": [
+            {
+                "type": "finish",
+                "name": "7348e0e8364a549cbc0d3fe34c5914",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Check If Application Exists",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "pluginVersion": 70,
+                "properties": {"application": "${p:appName}"},
+                "type": "plugin",
+                "name": "doesAppExist",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Send HTTP Call",
+                "pluginName": "Web Utilities",
+                "pluginVersion": 8,
+                "properties": {
+                    "url": "https:\/\/localhost:8443\/cli\/application\/create",
+                    "method": "PUT",
+                    "headers": "Accept: application\/json",
+                    "data": "{\n  \"name\": \"${p:appName}\",\n  \"description\": \"${p:appDesc}\",\n  \"notificationScheme\": \"Default Notification Scheme\",\n  \"enforceCompleteSnapshots\": \"false\",\n  \"templateName\": \"almApplication\"\n}",
+                    "contentType": "application\/json,application\/javascript,text\/javascript",
+                    "untrustedSSL": "true",
+                    "username": "admin",
+                    "password": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyhuw4|4yYaOLFCVnKyb1XzGmE6Vg==|wn6VROUemjTIelK4OHU4aQ==}",
+                    "outFile": ""
+                },
+                "type": "plugin",
+                "name": "createApplication",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Add Tag To Application",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "pluginVersion": 70,
+                "properties": {
+                    "application": "${p:appName}",
+                    "tag": "${p:appTag}"
+                },
+                "type": "plugin",
+                "name": "addAppTag",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Delete Application",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "pluginVersion": 70,
+                "properties": {"application": "${p:appName}"},
+                "type": "plugin",
+                "name": "deleteApp",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Load Operations",
+                "pluginName": "VNF Onboarding",
+                "pluginVersion": 3,
+                "properties": {
+                    "appName": "${p:appName}",
+                    "artDir": "\/var\/vnf"
+                },
+                "type": "plugin",
+                "name": "Load Operations",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Pull VNF Archive",
+                "pluginName": "VNF Onboarding",
+                "pluginVersion": 3,
+                "properties": {
+                    "appName": "${p:appName}",
+                    "artDir": "\/var\/vnf",
+                    "ftpDir": "\/accantoVNFs"
+                },
+                "type": "plugin",
+                "name": "Pull VNF Archive",
+                "children": []
+            },
+            {
+                "propertyName": "${p:doFTP}",
+                "type": "switch",
+                "name": "pull archive?",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Create VNF Component",
+                "pluginName": "VNF Onboarding",
+                "pluginVersion": 3,
+                "properties": {
+                    "appName": "${p:appName}",
+                    "compName": "${p:appName}",
+                    "templateName": "almComponent",
+                    "artDir": "\/var\/vnf\/...",
+                    "appTag": "${p:appTag}"
+                },
+                "type": "plugin",
+                "name": "createVNFComponent",
+                "children": []
+            },
+            {
+                "type": "join",
+                "name": "1778ac6b1aa6fca19175e5954179dc",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Add Environment to VNF",
+                "pluginName": "VNF Onboarding",
+                "pluginVersion": 3,
+                "properties": {
+                    "appName": "${p:appName}",
+                    "compName": "${p:appName}",
+                    "artDir": "Service-Template",
+                    "appTag": "orchestrator",
+                    "workDir": "\/home\/accanto\/ucd\/${p:appName}",
+                    "resourcePath": "\/orchestrator\/orchestrator",
+                    "envName": "orchestrator"
+                },
+                "type": "plugin",
+                "name": "addOrchestrationEnvironment",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Shell",
+                "pluginName": "Shell",
+                "pluginVersion": 7,
+                "properties": {
+                    "directoryOffset": ".",
+                    "shellInterpreter": "",
+                    "scriptBody": "#!\/bin\/bash\nif [[ -d \/var\/vnf\/${p:appName}\/playbooks ]] \nthen\n   exit 0\nelse\n   exit 1\nfi",
+                    "runAsDaemon": "false",
+                    "outputFile": ""
+                },
+                "type": "plugin",
+                "name": "isAnsible",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Add Environment to VNF",
+                "pluginName": "VNF Onboarding",
+                "pluginVersion": 3,
+                "properties": {
+                    "appName": "${p:appName}",
+                    "compName": "${p:appName}",
+                    "artDir": "playbooks",
+                    "appTag": "ansible",
+                    "workDir": "\/etc\/ansible\/${p:appName}\/playbooks",
+                    "resourcePath": "\/ansible\/ansible-srv",
+                    "envName": "ansible"
+                },
+                "type": "plugin",
+                "name": "addAnsibleEnvironment",
+                "children": []
+            }
+        ]
+    },
+    "properties": [
+        {
+            "name": "contextType",
+            "value": "Resource",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "defaultResourceId",
+            "value": "73c00fed-ae59-4799-b37f-7f7106e64586",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "workingDir",
+            "value": "${p:resource\/work.dir}\/${p:process.name}",
+            "description": "",
+            "secure": false
+        }
+    ],
+    "propDefs": [
+        {
+            "name": "appName",
+            "label": "Application name",
+            "pattern": "",
+            "type": "TEXT",
+            "required": true,
+            "description": "Application Name",
+            "placeholder": ""
+        },
+        {
+            "name": "appDesc",
+            "label": "Description",
+            "pattern": "",
+            "type": "TEXT",
+            "required": true,
+            "description": "Description",
+            "placeholder": ""
+        },
+        {
+            "name": "appTag",
+            "label": "Tag",
+            "pattern": "",
+            "type": "TEXT",
+            "value": "PoC",
+            "required": false,
+            "description": "Tag",
+            "placeholder": ""
+        },
+        {
+            "name": "doFTP",
+            "label": "Pull archive from FTP site",
+            "pattern": "",
+            "type": "CHECKBOX",
+            "value": "false",
+            "required": true,
+            "description": "Pull archive from FTP site",
+            "placeholder": ""
+        }
+    ],
+    "teamMappings": []
+}

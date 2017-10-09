@@ -1,0 +1,34 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+spring:
+    profiles:
+        active: dev
+    devtools:
+        restart:
+            enabled: true
+    jackson:
+        serialization:
+            indent-output: true
+
+urbancodedeploy:
+    allow-self-signed-certificates: true
+    environments:
+        admin@local:
+            ucd-server:
+                url: https://localhost:2443
+                username: admin
+                password: admin
+            ucd-patterns:
+                url: https://localhost:2448
+                username: ucdpadmin
+                password: ucdpadmin

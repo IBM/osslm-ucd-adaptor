@@ -1,0 +1,41 @@
+[
+  {
+    "id": "net_video",
+    "type": "blueprint",
+    "application": "probe",
+    "location": "/landscaper/orion/file/admin_67f1f92c_d428_428e_9cdb_41513499ada0-OrionContent/Internal-Team/net_video.yaml",
+    "name": "net_video",
+    "path": "net_video.yaml",
+    "url": "https://10.0.9.38:8443/landscaper/view/projects?open=net_video",
+    "category": "blueprint",
+    "icon": "images/editor/Blueprint_icon.png",
+    "version": "1.0",
+    "projectName": "Internal-Team"
+  },
+  {
+    "id": "c_storage",
+    "type": "blueprint",
+    "application": "probe",
+    "location": "/landscaper/orion/file/admin_67f1f92c_d428_428e_9cdb_41513499ada0-OrionContent/Internal-Team/c_storage.yaml",
+    "name": "c_storage",
+    "path": "c_storage.yaml",
+    "url": "https://10.0.9.38:8443/landscaper/view/projects?open=c_storage",
+    "category": "blueprint",
+    "icon": "images/editor/Blueprint_icon.png",
+    "version": "1.0",
+    "projectName": "Internal-Team"
+  },
+  {
+    "id": "c_streamer",
+    "type": "blueprint",
+    "application": "probe",
+    "location": "/landscaper/orion/file/admin_67f1f92c_d428_428e_9cdb_41513499ada0-OrionContent/Internal-Team/c_streamer.yaml",
+    "name": "c_streamer",
+    "path": "c_streamer.yaml",
+    "url": "https://10.0.9.38:8443/landscaper/view/projects?open=c_streamer",
+    "category": "blueprint",
+    "icon": "images/editor/Blueprint_icon.png",
+    "version": "1.0",
+    "projectName": "Internal-Team"
+  }
+]

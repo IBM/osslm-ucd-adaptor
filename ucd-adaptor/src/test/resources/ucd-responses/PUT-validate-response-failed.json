@@ -1,0 +1,46 @@
+[
+  {
+    "source": "template",
+    "object": {
+      "resources": {
+        "VLC_NFS_plain_no_extra_configs": {
+          "properties": {
+            "image": "faf1184c-7aab-424b-8b32-34b048687e91"
+          }
+        }
+      }
+    },
+    "errorMessage": "Image 'faf1184c-7aab-424b-8b32-34b048687e91' does not exist.",
+    "errorType": "error"
+  },
+  {
+    "source": "parameters",
+    "object": {
+      "parameters": {
+        "key_name": "martin"
+      }
+    },
+    "errorMessage": "Key pair 'martin' does not exist.",
+    "errorType": "error"
+  },
+  {
+    "source": "parameters",
+    "object": {
+      "parameters": {
+        "referenced-video-network": "7d0a61bf-986c-42e7-89ef-5a8942da2ae2"
+      }
+    },
+    "errorMessage": "Network '7d0a61bf-986c-42e7-89ef-5a8942da2ae2' does not exist.",
+    "errorType": "error"
+  },
+  {
+    "source": "parameters",
+    "object": {
+      "parameters": {
+        "referenced-management-network": "8201c737-9204-4a73-a01f-94b50ff88704"
+      }
+    },
+    "errorMessage": "Network '8201c737-9204-4a73-a01f-94b50ff88704' does not exist.",
+    "errorType": "error"
+  }
+]

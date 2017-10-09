@@ -1,0 +1,74 @@
+{
+    "inventoryManagementType": "AUTOMATIC",
+    "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+    "rootActivity": {
+        "edges": [
+            {
+                "to": "runCProc",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "FINISH",
+                "from": "runCProc",
+                "type": "SUCCESS",
+                "value": ""
+            }
+        ],
+        "offsets": [
+            {
+                "name": "FINISH",
+                "x": -5,
+                "y": 420,
+                "h": 80,
+                "w": 120
+            },
+            {
+                "name": "runCProc",
+                "x": -114.7938144329897,
+                "y": 178.24742268041237,
+                "h": 70,
+                "w": 260
+            }
+        ],
+        "layoutMode": "manual",
+        "type": "graph",
+        "name": "190d9b09-a5ff-4e90-9492-62393de59afc",
+        "children": [
+            {
+                "type": "finish",
+                "name": "FINISH",
+                "children": []
+            },
+            {
+                "componentName": "",
+                "properties": [
+                    {
+                        "name": "maxIteration",
+                        "value": "-1"
+                    },
+                    {
+                        "name": "runOnlyOnFirst",
+                        "value": "false"
+                    },
+                    {
+                        "name": "failFast",
+                        "value": "false"
+                    }
+                ],
+                "type": "componentEnvironmentIterator",
+                "name": "runCProc",
+                "children": [{
+                    "componentProcessName": "",
+                    "componentName": "",
+                    "allowFailure": false,
+                    "properties": { },
+                    "type": "componentProcess",
+                    "name": "runComponentProc",
+                    "children": []
+                }]
+            }
+        ]
+    },
+    "versionPresets": []
+}

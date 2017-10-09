@@ -1,0 +1,371 @@
+{
+    "name": "onboard VNF Package",
+    "description": "creates component and application from templates",
+    "rootActivity": {
+        "edges": [
+            {
+                "to": "1778ac6b1aa6fca19175e5954179dc",
+                "from": "Load HEAT file",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "addAppTag",
+                "from": "Create Application From Template",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "does component exist?",
+                "from": "doesAppExist",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "does component exist?",
+                "from": "addAppTag",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "Load HEAT file",
+                "from": "createVNFComponent",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "deleteApp",
+                "from": "addAppTag",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "deleteApp",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "1778ac6b1aa6fca19175e5954179dc",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "7348e0e8364a549cbc0d3fe34c5914",
+                "from": "Create Application From Template",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "Load Operations",
+                "from": "createVNFComponent",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "Load Operations",
+                "from": "does component exist?",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "Create Application From Template",
+                "from": "doesAppExist",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "doesAppExist",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "deleteApp",
+                "from": "createVNFComponent",
+                "type": "FAILURE",
+                "value": ""
+            },
+            {
+                "to": "1778ac6b1aa6fca19175e5954179dc",
+                "from": "Load Operations",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "createVNFComponent",
+                "from": "does component exist?",
+                "type": "FAILURE",
+                "value": ""
+            }
+        ],
+        "offsets": [
+            {
+                "name": "7348e0e8364a549cbc0d3fe34c5914",
+                "x": -129.4855967078189,
+                "y": 1090,
+                "h": 90,
+                "w": 140
+            },
+            {
+                "name": "Create Application From Template",
+                "x": -324.4855967078189,
+                "y": 280,
+                "h": 90,
+                "w": 500
+            },
+            {
+                "name": "Load Operations",
+                "x": 115.5144032921811,
+                "y": 840,
+                "h": 90,
+                "w": 320
+            },
+            {
+                "name": "deleteApp",
+                "x": -584.4855967078189,
+                "y": 840,
+                "h": 90,
+                "w": 340
+            },
+            {
+                "name": "doesAppExist",
+                "x": -145,
+                "y": 140,
+                "h": 90,
+                "w": 420
+            },
+            {
+                "name": "does component exist?",
+                "x": -229.4855967078189,
+                "y": 560,
+                "h": 90,
+                "w": 430
+            },
+            {
+                "name": "Load HEAT file",
+                "x": -214.4855967078189,
+                "y": 840,
+                "h": 90,
+                "w": 300
+            },
+            {
+                "name": "createVNFComponent",
+                "x": -269.4855967078189,
+                "y": 700,
+                "h": 90,
+                "w": 390
+            },
+            {
+                "name": "addAppTag",
+                "x": -341.1522633744856,
+                "y": 420,
+                "h": 90,
+                "w": 390
+            },
+            {
+                "name": "1778ac6b1aa6fca19175e5954179dc",
+                "x": -129.4855967078189,
+                "y": 980,
+                "h": 60,
+                "w": 140
+            }
+        ],
+        "layoutMode": "auto",
+        "type": "graph",
+        "name": "4534539b-6a64-4903-b295-d3b4ecdb5c0d",
+        "children": [
+            {
+                "type": "finish",
+                "name": "7348e0e8364a549cbc0d3fe34c5914",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 73,
+                "commandName": "Check If Application Exists",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "properties": {"application": "${p:appName}"},
+                "type": "plugin",
+                "name": "doesAppExist",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 73,
+                "commandName": "Add Tag To Application",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "properties": {
+                    "application": "${p:appName}",
+                    "tag": "${p:appTag}"
+                },
+                "type": "plugin",
+                "name": "addAppTag",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 73,
+                "commandName": "Delete Application",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "properties": {"application": "${p:appName}"},
+                "type": "plugin",
+                "name": "deleteApp",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 3,
+                "commandName": "Load Operations",
+                "pluginName": "VNF Onboarding",
+                "properties": {
+                    "appName": "${p:appName}",
+                    "artDir": "\/var\/vnf"
+                },
+                "type": "plugin",
+                "name": "Load Operations",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 3,
+                "commandName": "Create VNF Component",
+                "pluginName": "VNF Onboarding",
+                "properties": {
+                    "appName": "${p:appName}",
+                    "compName": "${p:appName}",
+                    "templateName": "almComponent",
+                    "artDir": "\/var\/vnf\/...",
+                    "appTag": "${p:appTag}"
+                },
+                "type": "plugin",
+                "name": "createVNFComponent",
+                "children": []
+            },
+            {
+                "type": "join",
+                "name": "1778ac6b1aa6fca19175e5954179dc",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 3,
+                "commandName": "Load HEAT file",
+                "pluginName": "VNF Onboarding",
+                "properties": {
+                    "appName": "${p:appName}",
+                    "appTag": "${p:appTag}",
+                    "artDir": "\/var\/vnf",
+                    "bpName": "${p:appName}"
+                },
+                "type": "plugin",
+                "name": "Load HEAT file",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 73,
+                "commandName": "Create Application From Template",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "properties": {
+                    "application": "${p:appName}",
+                    "description": "${p:appDesc}",
+                    "templateName": "almApplication",
+                    "templateId": "",
+                    "templateVersion": "",
+                    "existingComponentIds": "",
+                    "notificationScheme": "Default Notification Scheme",
+                    "enforceCompleteSnapshots": "false"
+                },
+                "type": "plugin",
+                "name": "Create Application From Template",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "pluginVersion": 68,
+                "commandName": "Check If Component Exists",
+                "pluginName": "IBM UrbanCode Deploy Components",
+                "properties": {"component": "${p:appName}"},
+                "type": "plugin",
+                "name": "does component exist?",
+                "children": []
+            }
+        ]
+    },
+    "properties": [
+        {
+            "name": "contextType",
+            "value": "Resource",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "defaultResourceId",
+            "value": "73c00fed-ae59-4799-b37f-7f7106e64586",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "workingDir",
+            "value": "${p:resource\/work.dir}\/${p:process.name}",
+            "description": "",
+            "secure": false
+        }
+    ],
+    "propDefs": [
+        {
+            "name": "appName",
+            "label": "Application name",
+            "pattern": "",
+            "type": "TEXT",
+            "required": true,
+            "description": "Application Name",
+            "placeholder": ""
+        },
+        {
+            "name": "appDesc",
+            "label": "Description",
+            "pattern": "",
+            "type": "TEXT",
+            "required": true,
+            "description": "Description",
+            "placeholder": ""
+        },
+        {
+            "name": "appTag",
+            "label": "Tag",
+            "pattern": "",
+            "type": "TEXT",
+            "value": "PoC",
+            "required": false,
+            "description": "Tag",
+            "placeholder": ""
+        }
+    ],
+    "teamMappings": []
+}

@@ -1,0 +1,6 @@
+name: resource::UCD-Network::1.0
+description: Network resource from UrbanCode Deploy
+resource-manager-type: ucd
+lifecycle:
+- Install
+- Uninstall

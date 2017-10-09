@@ -1,0 +1,6 @@
+name: resource::UCD-Image::1.0
+description: Image resource from UrbanCode Deploy
+resource-manager-type: ucd
+lifecycle:
+- Install
+- Uninstall

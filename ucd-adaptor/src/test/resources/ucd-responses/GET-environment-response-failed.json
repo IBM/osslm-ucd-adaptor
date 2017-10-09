@@ -1,0 +1,45 @@
+{
+  "id": "138c9e0f-23ff-4054-9963-57e368658309",
+  "name": "loadbalancer",
+  "blueprintName": "loadbalancer",
+  "blueprintUrl": "https://10.0.9.38:8443/landscaper/view/projects?open=admin_67f1f92c_d428_428e_9cdb_41513499ada0-OrionContent/Internal-Team/loadbalancer.yaml",
+  "stack_status": "CREATE_FAILED",
+  "stack_status_reason": "Resource CREATE failed: NameError: resources.loadbalancer: Agent did not show up even after 360.0 seconds!",
+  "creation_time": "2016-12-07T17:19:49Z",
+  "owner": "admin",
+  "created_by": "admin",
+  "regionName": "RegionOne",
+  "cloudProjectName": "admin@localstack",
+  "parameters": {
+    "OS::project_id": "7002d3f993f14cff9de225bf7baa2610",
+    "IBM::Cloud": "5582ff0b-f878-4513-b559-73c2429e524e",
+    "ucd_user": "admin",
+    "OS::stack_name": "loadbalancer",
+    "availability_zone": "nova",
+    "lb_server_name": "LB Server",
+    "IBM::UCD::USER": "admin",
+    "ucd_server_url": "https://10.0.9.30:8443",
+    "ucd_password": "******",
+    "dns_ip": "8.8.8.8",
+    "OS::stack_id": "138c9e0f-23ff-4054-9963-57e368658309",
+    "public_network_id": "6a557676-969b-4fa7-8ce5-231c845a3e0d",
+    "OS::region": "RegionOne",
+    "ucd_relay_url": "None",
+    "key_name": "martin",
+    "IBM::Cloud::Type": "AUTH_REALM",
+    "flavor": "m1.small",
+    "referenced-management-network": "442f69c9-8c31-46ef-9007-8203b8dfd8fc"
+  },
+  "outputs": [
+    {
+      "output_value": "https://10.0.9.38:8443/landscaper/view/projects?open=admin_67f1f92c_d428_428e_9cdb_41513499ada0-OrionContent/Internal-Team/loadbalancer.yml",
+      "description": "Blueprint Origin URL",
+      "output_key": "blueprint_url"
+    },
+    {
+      "output_value": "8ea8cd91-6d42-4549-b6af-8cf93bcff7be",
+      "description": "Id of the internal lb network created for pool servers to join",
+      "output_key": "referenced-user-network"
+    }
+  ]
+}

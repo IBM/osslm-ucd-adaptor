@@ -1,0 +1,58 @@
+[
+  {
+    "name": "brian",
+    "fingerprint": "dd:90:8b:3b:55:14:72:e4:1c:29:20:06:9f:4b:62:bc",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCBwS430MGUvNfnLhiBj4ivqrX0odJIi0zDjOann82ZY6WuI4tfTFyOLPDJZKQZrv4ba1vTJmyYTUJqiFOgG+6djig1TwGXE5SnKYXZx6UVUSVTJeBSLqkjUsqD/L15wLScARbi90gXk0YSuaGjXoXbP+yvOZqXAlTKCOzmPPgOp4a4zBFryxBR4IEQtw2HrTVvMf97VYeNift2pARaw+RcE3yZ4c/X+5oJvUkBIvBL4BFJoPCZXyQBq5XLpW4smXJl+1UtpOdHyC/boaxUsNMVxL7tU0rg0X4LEjaLLbSEkXuw2UVFT67OngGbDXhFvEPYxmuRihUsHGSme171PwAx Generated-by-Nova",
+    "private_key": null,
+    "id": "brian"
+  },
+  {
+    "name": "Demo",
+    "fingerprint": "22:00:7d:95:98:23:c1:b4:bc:99:4d:f7:90:9e:08:c3",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4AoJUE4QAUSVUdMsAQpwU8d2mOCSbK5go9RJl0w4rH55Skdt+ai5cUWx56JHK+Lghm33neCOpUiwNl89HfKvSE6M37+Y6GHTBkdgMlz9S+ygjUkkZ3ayeQS2VWCM5t8Lo+EFoPBnUy/RJF0fSIRQr7B5XuqKN/iJXRf/3aMf3mrOnli8TsX5/DOy55c0wcftBLBkvMaEIzkr3WqsMRZSmClxXAsGX4aLxxOO370oM/ZEL53lWpDQrYGZ0S5OH4b0qadN0iuvVdao6zM6VhWYYWmBkBomRsHgM0iD+eQiYDrnkVTFEkUnnlFxYNnc+IYgvzRt6pCUvwYECAatEzlMT Generated-by-Nova",
+    "private_key": null,
+    "id": "Demo"
+  },
+  {
+    "name": "jochen",
+    "fingerprint": "ef:b8:12:3d:44:91:70:0a:e5:07:71:ad:3d:6f:4f:dc",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWJ5TdswYYx+XHerTM/BKqrmw8UayfRRC2QNAy8Uf+jHOTMrqz+tS4UpYNIG3ptH/ho2rbxOMqlqu4e8DEn5qKn20PNssu65HGNahNhZtXafuDXyytI+SoWQchK15gqmVyVgIct3L3NANh9NZ4lPVMiCBjrCNJaUqJ7abhf/ig0AvJmMvS1TIDWr08arSA7XHwMOV+ee7Mm7HHf+0qkJMkl6I2LIRy4IpOZEMe/ADjs/lW9dWYBHiN0+gofHNoHINjE41rJ+ZTuXtwm1E926H49oxe4qGU69QiR7tvG7rxbtAxCTFXR0BiFOOg1kFP+UJ8jdS86Sc5J+vXggh/2dlv Generated-by-Nova",
+    "private_key": null,
+    "id": "jochen"
+  },
+  {
+    "name": "Management-key",
+    "fingerprint": "9c:f7:b1:e8:61:e8:ff:90:a6:c6:ff:b0:6f:5d:06:5a",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4r0VepzJ43RVnxRn5hwWEudYNDoG/1ecid9lE7pXCUQ1OJJ67l3Qz08ocEYSzZZmskUNRREqImOdt91n1NYCXMBOopdmd7N7QGtDH2pWmEbb3NK8ti2wRPQxc8bL3rjh0seOLx6jng7UUYAbfrjZHKFwkQwskKGHwR91oLCpDKOGsD+xQKfdCanqq/tSbeJWTITS3n0U/gbS/tU6d2+NVfka+/X2dDepbDDOkqM3Js911dwqrBBbzI9Qkun3QCuyb3JxT6gHFjLw1maCrnWR5jxhKTIgyhvIe6k7hKcTvMDG1Fga4s6pCUxuVJ02UkMBzQQ6PBuULeRy68wCBCwUl Generated-by-Nova",
+    "private_key": null,
+    "id": "Management-key"
+  },
+  {
+    "name": "martin",
+    "fingerprint": "e6:26:9f:ae:f7:fe:cf:b4:70:73:7b:95:1b:66:b3:28",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0EAuAQxXeR+uasI/XcetbB5+brTbAmCHRPDplYu1+RXyCUQdGJe1HAkE1JEsk0bWSsdAT+oUTckb6ZkvpPB5WY8e2ieM8hd+GSTxWJGZvf+WV8dNv+q18N1u4ZkZojdqUUVvMSC1p99CmhgCcElNWblxRsJXdbs6e6Bsu6hCqIHqNDkWeyhsl+g+bK3EGp2g7Fb91U8cw1w5zWrQxY2epCCzQ1w4zpNerQrRshlPYd9LW0uNdPREeXiT2qc7YtcvDbiSnuEzUhlNlypKp6rom7MlZZGTU+xYW9bkfJ7sJWdfYVbGf9EZNw96tkT3BunBW+0cheRhoaN7am09KoTA3 Generated-by-Nova",
+    "private_key": null,
+    "id": "martin"
+  },
+  {
+    "name": "mmer",
+    "fingerprint": "3b:7d:76:94:b0:1f:e9:16:0d:05:03:f5:11:9c:83:54",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLNxGAv3YL/01G5+o5zhRcG9NLhTe50CFXVfdjrXHjObf169TOS67Q+k7iKKJnHk215EfhmSNM2m5pfixkKKSTtnt0v2Qh8MfbcFUR2BnlVRwqa7eea+hTSvThR1XBN6UOmA/Cor2p5NbLnCsV6WsPhUTCY+mVbLPV2LSq9eDHhD8Z8OaBcK8/nXtjqGnNnwQC5vS3B/svXk+WLBDlYuh34yLoogCkWUCOVp150Ut+ErRBfV4RnP7EKFoTsCtFetrlPU2pOLTyFwXKvlx3TJ7Qbb5SS0Cp+MlLiVFIZ2gCVSNFHZyxSr7bTgSoyJ5whnalfS47JUZhjI/0A3dQVomj Generated-by-Nova",
+    "private_key": null,
+    "id": "mmer"
+  },
+  {
+    "name": "varban",
+    "fingerprint": "43:75:d3:74:f9:d2:64:3b:45:97:ee:ed:49:ee:19:da",
+    "user_id": null,
+    "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIKATh5jFyfto+pLbKqO8qfb0NdBPPbMsJrhIuBobI0A2mE4qLNMWA34vf3SJyNhGVYee/ABhI1qrxNiQ3j1DrwYV5Fuz++IL1UMmC+t6o71d5vSU5YjjKGzWwSr8E8qMLhSj+ES23TcTKn13hQ+gatLAbmePpx7VxK9U7SY/eb6vuP7I9BGVBOEgtnGbXJnHjQgmqdmexe3zpRtxu10EjpzDsQWenZeML7Akdw/Q22eoAJiSBQeCpeBNzomZ7n3qyYa2Cu/TRdjUPbIcnEcZPjYNNwORtLxXuDXnlGbjoxJm9KnfS6x2gUmhiAagljN9lzcKc2GalAo6eRbiwFsG9 Generated-by-Nova",
+    "private_key": null,
+    "id": "varban"
+  }
+]

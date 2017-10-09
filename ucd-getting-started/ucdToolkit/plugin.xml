@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.urbancode.com/PluginXMLSchema_v1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <header>
+    <identifier id="VNFOPSLOAD" version="3" name="VNF Onboarding for ALM"/>
+    <description>Imports VNF descriptors and templates. Creates application and component processes as well as blueprints</description>
+    <tag>VNF/Onboarding</tag>
+  </header>
+  <step-type name="Load Operations">
+    <description>Creates application and component processes for an operation descriptor</description>
+    <properties>
+      <property name="appName" required="true">
+         <property-ui type="textBox" label="Application Name"
+             description="Application Name"
+             default-value=""/>
+      </property>
+      <property name="artDir" required="true">
+         <property-ui type="textBox" label="Descriptor root directory"
+             description="Root directory for the VNF descriptors"
+             default-value="/var/vnf"/>
+      </property>
+    </properties>
+    <post-processing>
+      <![CDATA[
+        if (properties.get("exitCode") != 0) {
+            properties.put("Status", "Failure");
+        }
+        else {
+            properties.put("Status", "Success");
+        }
+     ]]>
+    </post-processing>
+    <command program="python">
+      <arg file="loadVNFOperations.py"/>
+      <arg file="${PLUGIN_INPUT_PROPS}"/>
+      <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+      <arg file="config.properties"/>
+      <arg file="componentOperation.json"/>
+      <arg file="applicationOperation.json"/>
+    </command>
+  </step-type>
+  <step-type name="Load HEAT file">
+    <description>Imports a HEAT template file into the default git repo and creates a blueprint</description>
+    <properties>
+      <property name="appName" required="true">
+         <property-ui type="textBox" label="Application Name"
+             description="Application Name"
+             default-value=""/>
+      </property>
+      <property name="appTag" required="true">
+         <property-ui type="textBox" label="Tag"
+             description="The tag will be used to create the folder in the git repo"
+             default-value="PoC"/>
+      </property>
+      <property name="artDir" required="true">
+         <property-ui type="textBox" label="Descriptor root directory"
+             description="Root directory for the VNF descriptors"
+             default-value="/var/vnf"/>
+      </property>
+      <property name="bpName" required="true">
+         <property-ui type="textBox" label="HEAT filename"
+             description="Filename of the HEAT file to load (incl file extension)"
+             default-value=""/>
+      </property>
+    </properties>
+    <post-processing>
+      <![CDATA[
+        if (properties.get("exitCode") != 0) {
+            properties.put("Status", "Failure");
+        }
+        else {
+            properties.put("Status", "Success");
+        }
+     ]]>
+    </post-processing>
+    <command program="python">
+      <arg file="loadHEAT.py"/>
+      <arg file="${PLUGIN_INPUT_PROPS}"/>
+      <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+      <arg file="config.properties"/>
+    </command>
+  </step-type>
+  <step-type name="Pull VNF Archive">
+    <description>Pulls VNF archive file from a FTP site and extracts to lcoal directory</description>
+    <properties>
+      <property name="appName" required="true">
+         <property-ui type="textBox" label="Application Name"
+             description="Application Name"
+             default-value=""/>
+      </property>
+      <property name="artDir" required="true">
+         <property-ui type="textBox" label="Descriptor root directory"
+             description="Root directory for the VNF descriptors"
+             default-value="/var/vnf"/>
+      </property>
+      <property name="ftpDir" required="true">
+         <property-ui type="textBox" label="Archive FTP directory"
+             description="FTP server directory for the archives"
+             default-value="/accantoVNFs"/>
+      </property>
+    </properties>
+    <post-processing>
+      <![CDATA[
+        if (properties.get("exitCode") != 0) {
+            properties.put("Status", "Failure");
+        }
+        else {
+            properties.put("Status", "Success");
+        }
+     ]]>
+    </post-processing>
+    <command program="python">
+      <arg file="pullVNFArchives.py"/>
+      <arg file="${PLUGIN_INPUT_PROPS}"/>
+      <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+      <arg file="config.properties"/>
+    </command>
+  </step-type>
+  <step-type name="Create VNF Component">
+    <description>Creates and tags a VNF component, assigns it to an application</description>
+    <properties>
+      <property name="appName" required="true">
+         <property-ui type="textBox" label="Application Name"
+             description="Application Name"
+             default-value=""/>
+      </property>
+      <property name="compName" required="true">
+         <property-ui type="textBox" label="Component Name"
+             description="Component Name"
+             default-value=""/>
+      </property>
+      <property name="templateName" required="false">
+         <property-ui type="textBox" label="Component Template Name"
+             description="Component Template Name"
+             default-value=""/>
+      </property>
+      <property name="artDir" required="true">
+         <property-ui type="textBox" label="VNF descriptor directory path"
+             description="Path to the VNF descriptors"
+             default-value="/var/vnf/..."/>
+      </property>
+      <property name="appTag" required="true">
+         <property-ui type="textBox" label="Tag of the VNF application"
+             description="VNF application tag"
+             default-value="PoC"/>
+      </property>
+    </properties>
+    <post-processing>
+      <![CDATA[
+        if (properties.get("exitCode") != 0) {
+            properties.put("Status", "Failure");
+        }
+        else {
+            properties.put("Status", "Success");
+        }
+     ]]>
+    </post-processing>
+    <command program="python">
+      <arg file="createVNFComponent.py"/>
+      <arg file="${PLUGIN_INPUT_PROPS}"/>
+      <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+      <arg file="config.properties"/>
+      <arg file="component.json"/>
+    </command>
+  </step-type>
+  <step-type name="Add Environment to VNF">
+    <description>Add environments for orchestration and configuration </description>
+    <properties>
+      <property name="appName" required="true">
+         <property-ui type="textBox" label="Application Name"
+             description="Application Name"
+             default-value=""/>
+      </property>
+      <property name="compName" required="true">
+         <property-ui type="textBox" label="Component Name"
+             description="Component Name"
+             default-value=""/>
+      </property>
+      <property name="artDir" required="true">
+         <property-ui type="textBox" label="Subdiretory for artefacts"
+             description="Subdirectory for the artefacts in the repository"
+             default-value="lifecycle"/>
+      </property>
+      <property name="appTag" required="true">
+         <property-ui type="textBox" label="Tag of the VNF application"
+             description="VNF application tag"
+             default-value="PoC"/>
+      </property>
+      <property name="workDir" required="false">
+         <property-ui type="textBox" label="Artefact path on target mgmt server"
+             description="Artefact path on the mgmt server"
+             default-value="/root/artefacts"/>
+      </property>
+      <property name="resourcePath" required="false">
+         <property-ui type="textBox" label="Resource path"
+             description="Resource path (required if MGMT tag is set)"
+             default-value="/base resource/agent"/>
+      </property>
+      <property name="envName" required="false">
+         <property-ui type="textBox" label="Environment name of the mgmt app"
+             description="Environment name (required if MGMT tag is set)"
+             default-value=""/>
+      </property>
+    </properties>
+    <post-processing>
+      <![CDATA[
+        if (properties.get("exitCode") != 0) {
+            properties.put("Status", "Failure");
+        }
+        else {
+            properties.put("Status", "Success");
+        }
+     ]]>
+    </post-processing>
+    <command program="python">
+      <arg file="addEnvironmentToVNF.py"/>
+      <arg file="${PLUGIN_INPUT_PROPS}"/>
+      <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+      <arg file="config.properties"/>
+    </command>
+  </step-type>
+</plugin>

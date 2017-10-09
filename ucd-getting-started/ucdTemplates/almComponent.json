@@ -1,0 +1,614 @@
+{
+    "securityResourceId": "9a9d5ea1-b340-4276-910a-1d9496ef4dac",
+    "path": "componentTemplates\/1b04b2bd-6fec-477f-901a-d33a3602ec30",
+    "name": "almComponent",
+    "description": "Mother of all ALM components",
+    "ignoreQualifiers": 0,
+    "componentType": "STANDARD",
+    "tags": [],
+    "sourceConfigPluginName": "File System",
+    "active": true,
+    "sourceConfigProperties": [
+        {
+            "name": "basePath",
+            "value": "\/var\/vnf\/${p:component.name}",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "namePattern",
+            "value": "${version}",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "useNamePattern",
+            "value": "true",
+            "description": "",
+            "secure": false
+        }
+    ],
+    "envPropDefs": [
+        {
+            "name": "Integrity_latest_result",
+            "label": "Latest integrity check result (read-only)",
+            "pattern": "",
+            "type": "TEXT",
+            "value": "0",
+            "required": false,
+            "description": "Result of latest integrity check (read-only)",
+            "placeholder": ""
+        },
+        {
+            "name": "Integrity_latest_result_reason",
+            "label": "Reason code of latest integrity check (read-only)",
+            "pattern": "",
+            "type": "TEXT",
+            "required": false,
+            "description": "Reason code of latest integrity check (read-only)",
+            "placeholder": ""
+        }
+    ],
+    "resPropDefs": [],
+    "propDefs": [],
+    "properties": [],
+    "processes": [
+        {
+            "name": "Install",
+            "description": "Installs the component (download artifacts and calls install script)",
+            "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+            "takesVersion": true,
+            "inventoryActionType": "ADD",
+            "status": "Active",
+            "configActionType": "ADD",
+            "active": true,
+            "path": "componentTemplates\/1b04b2bd-6fec-477f-901a-d33a3602ec30\/processes\/8f031ccd-006d-4ba2-b74d-d737005af64c",
+            "propDefs": [],
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "update sw repo",
+                        "from": "Download all Artifacts",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "ce59fd8e9176033504c46b4a9759b1",
+                        "from": "run install script",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "run install script",
+                        "from": "update sw repo",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "ce59fd8e9176033504c46b4a9759b1",
+                        "from": "Download all Artifacts",
+                        "type": "FAILURE",
+                        "value": ""
+                    },
+                    {
+                        "to": "ce59fd8e9176033504c46b4a9759b1",
+                        "from": "update sw repo",
+                        "type": "FAILURE",
+                        "value": ""
+                    },
+                    {
+                        "to": "Download all Artifacts",
+                        "type": "ALWAYS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "ce59fd8e9176033504c46b4a9759b1",
+                        "x": -5,
+                        "y": 415,
+                        "h": 80,
+                        "w": 120
+                    },
+                    {
+                        "name": "Download all Artifacts",
+                        "x": 115,
+                        "y": 170,
+                        "h": 70,
+                        "w": 260
+                    },
+                    {
+                        "name": "update sw repo",
+                        "x": 415,
+                        "y": 174.04040404040404,
+                        "h": 70,
+                        "w": 190
+                    },
+                    {
+                        "name": "run install script",
+                        "x": 375,
+                        "y": 380.00000000000006,
+                        "h": 70,
+                        "w": 200
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "633834f2-54a5-470d-9c7e-66ba7d25d573",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "ce59fd8e9176033504c46b4a9759b1",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "commandName": "Download Artifacts",
+                        "pluginName": "IBM UrbanCode Deploy Versioned File Storage",
+                        "pluginVersion": 27,
+                        "properties": {
+                            "directoryOffset": ".",
+                            "artifactSetBaseDir": "",
+                            "fileIncludePatterns": "**\/*",
+                            "fileExcludePatterns": "",
+                            "syncMode": "true",
+                            "fullVerification": "true",
+                            "setFileExecuteBits": "false",
+                            "verifyFileIntegrity": "false",
+                            "versionId": "${p:version.id}",
+                            "serverUrl": "${p:server.url}",
+                            "compId": "${p:component.id}",
+                            "resId": "${p:resource.id}",
+                            "charset": "",
+                            "label": ""
+                        },
+                        "type": "plugin",
+                        "name": "Download all Artifacts",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "commandName": "Shell",
+                        "pluginName": "Shell",
+                        "pluginVersion": 7,
+                        "properties": {
+                            "directoryOffset": "lifecycle",
+                            "shellInterpreter": "",
+                            "scriptBody": "#!\/bin\/bash\nsudo chmod a+x *.sh\n[[ -d ..\/operations ]] && sudo chmod a+x ..\/operations\/*.sh\nsudo .\/${p:componentProcess.name}.sh",
+                            "runAsDaemon": "false",
+                            "outputFile": ""
+                        },
+                        "type": "plugin",
+                        "name": "run install script",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "commandName": "Shell",
+                        "pluginName": "Shell",
+                        "pluginVersion": 7,
+                        "properties": {
+                            "directoryOffset": "config",
+                            "shellInterpreter": "",
+                            "scriptBody": "sudo cp -f sources.list \/etc\/apt\/.\nsudo apt-get update",
+                            "runAsDaemon": "false",
+                            "outputFile": ""
+                        },
+                        "type": "plugin",
+                        "name": "update sw repo",
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Reconfigure",
+            "description": "Reconfigures the component (download latest artifacts and call reconfuration script)",
+            "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+            "takesVersion": true,
+            "status": "",
+            "active": true,
+            "path": "componentTemplates\/1b04b2bd-6fec-477f-901a-d33a3602ec30\/processes\/7ad507b4-06e9-42de-8c08-62b2df107e04",
+            "propDefs": [],
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "Download Artifacts",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "ce59fd8e9176033504c46b4a9759b1",
+                        "from": "runScript",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "Chmod scripts",
+                        "from": "Download Artifacts",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "runScript",
+                        "from": "Chmod scripts",
+                        "type": "SUCCESS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "Download Artifacts",
+                        "x": -75,
+                        "y": 145,
+                        "h": 70,
+                        "w": 260
+                    },
+                    {
+                        "name": "runScript",
+                        "x": -25,
+                        "y": 415,
+                        "h": 70,
+                        "w": 160
+                    },
+                    {
+                        "name": "Chmod scripts",
+                        "x": -40,
+                        "y": 280,
+                        "h": 70,
+                        "w": 190
+                    },
+                    {
+                        "name": "ce59fd8e9176033504c46b4a9759b1",
+                        "x": -5,
+                        "y": 550,
+                        "h": 80,
+                        "w": 120
+                    }
+                ],
+                "layoutMode": "auto",
+                "type": "graph",
+                "name": "1f47a82e-7a3b-41a2-97c4-b5e0507267ca",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "ce59fd8e9176033504c46b4a9759b1",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "postProcessingScript": {
+                            "id": "943c8c1f-775b-436a-8fc3-35296bd3cd8b",
+                            "name": "getExitReason",
+                            "description": "gets exit reason from script output",
+                            "body": "var exit = properties.get('exitCode');\n\nscanner.register(\"exitReason=\", function(lineNumber, line) {\n     var value=line.replace(\"exitReason=\",\"\");\n     properties.put(\"exitReason\",value);\n});\n\nif (exit == 0) {\n    properties.put('Status', 'Success');\n}\nelse {\n     properties.put('Status', 'Failure');\n}\n\nscanner.scan();"
+                        },
+                        "commandName": "Shell",
+                        "pluginName": "Shell",
+                        "pluginVersion": 7,
+                        "properties": {
+                            "directoryOffset": "lifecycle",
+                            "shellInterpreter": "",
+                            "scriptBody": "sudo .\/Reconfigure.sh",
+                            "runAsDaemon": "false",
+                            "outputFile": ""
+                        },
+                        "type": "plugin",
+                        "name": "runScript",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": true,
+                        "impersonationUseSudo": false,
+                        "commandName": "Download Artifacts",
+                        "pluginName": "IBM UrbanCode Deploy Versioned File Storage",
+                        "pluginVersion": 27,
+                        "properties": {
+                            "directoryOffset": ".",
+                            "artifactSetBaseDir": "",
+                            "fileIncludePatterns": "**\/*",
+                            "fileExcludePatterns": "",
+                            "syncMode": "true",
+                            "fullVerification": "true",
+                            "setFileExecuteBits": "true",
+                            "verifyFileIntegrity": "false",
+                            "versionId": "${p:version.id}",
+                            "serverUrl": "${p:server.url}",
+                            "compId": "${p:component.id}",
+                            "resId": "${p:resource.id}",
+                            "charset": "",
+                            "label": ""
+                        },
+                        "type": "plugin",
+                        "name": "Download Artifacts",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "commandName": "Shell",
+                        "pluginName": "Shell",
+                        "pluginVersion": 7,
+                        "properties": {
+                            "directoryOffset": ".",
+                            "shellInterpreter": "",
+                            "scriptBody": "#!\/bin\/bash\n# these may not be there.\n[[ -d .\/operations ]] && sudo chmod a+x .\/operations\/*.sh\n\n# there has to be lifecycle scripts, so we'll fail if they are missing \nsudo chmod a+x .\/lifecycle\/*.sh\n",
+                            "runAsDaemon": "false",
+                            "outputFile": ""
+                        },
+                        "type": "plugin",
+                        "name": "Chmod scripts",
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "__pushArtefacts",
+            "description": "pushes artefacts to management server",
+            "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+            "takesVersion": true,
+            "inventoryActionType": "ADD",
+            "status": "Active",
+            "configActionType": "ADD",
+            "active": true,
+            "path": "componentTemplates\/1b04b2bd-6fec-477f-901a-d33a3602ec30\/processes\/b44211a1-b9e8-4020-8d16-d98a22aaaf78",
+            "propDefs": [],
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "DownloadArtifacts",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "5ee46cd116cb67e218726991ac44fe",
+                        "from": "DownloadArtifacts",
+                        "type": "SUCCESS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "5ee46cd116cb67e218726991ac44fe",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    },
+                    {
+                        "name": "DownloadArtifacts",
+                        "x": -73.36734693877554,
+                        "y": 184.28571428571428,
+                        "h": 70,
+                        "w": 260
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "c80b73bc-0277-4d6c-be37-49b167d0120a",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "5ee46cd116cb67e218726991ac44fe",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "workingDir": "${p:workDir}",
+                        "commandName": "Download Artifacts",
+                        "pluginName": "IBM UrbanCode Deploy Versioned File Storage",
+                        "pluginVersion": 27,
+                        "properties": {
+                            "directoryOffset": ".",
+                            "artifactSetBaseDir": "",
+                            "fileIncludePatterns": "${p:artDir}\/**\/*",
+                            "fileExcludePatterns": "",
+                            "syncMode": "true",
+                            "fullVerification": "true",
+                            "setFileExecuteBits": "false",
+                            "verifyFileIntegrity": "false",
+                            "versionId": "${p:version.id}",
+                            "serverUrl": "${p:server.url}",
+                            "compId": "${p:component.id}",
+                            "resId": "${p:resource.id}",
+                            "charset": "",
+                            "label": ""
+                        },
+                        "type": "plugin",
+                        "name": "DownloadArtifacts",
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "doOperation",
+            "description": "calls a lifecycle operation script",
+            "defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+            "takesVersion": false,
+            "status": "",
+            "active": true,
+            "path": "componentTemplates\/1b04b2bd-6fec-477f-901a-d33a3602ec30\/processes\/0bea5cca-7264-494f-804b-55a14b26b00c",
+            "propDefs": [],
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "runScript",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "setExitCode",
+                        "from": "if Integrity",
+                        "type": "VALUE",
+                        "value": "Integrity"
+                    },
+                    {
+                        "to": "setExitReason",
+                        "from": "setExitCode",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "ce59fd8e9176033504c46b4a9759b1",
+                        "from": "setExitReason",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "ce59fd8e9176033504c46b4a9759b1",
+                        "from": "if Integrity",
+                        "type": "VALUE",
+                        "value": ""
+                    },
+                    {
+                        "to": "if Integrity",
+                        "from": "runScript",
+                        "type": "ALWAYS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "ce59fd8e9176033504c46b4a9759b1",
+                        "x": -2.366255144032948,
+                        "y": 700,
+                        "h": 90,
+                        "w": 140
+                    },
+                    {
+                        "name": "setExitCode",
+                        "x": -352.36625514403295,
+                        "y": 420,
+                        "h": 90,
+                        "w": 540
+                    },
+                    {
+                        "name": "if Integrity",
+                        "x": -168.68312757201647,
+                        "y": 280,
+                        "h": 90,
+                        "w": 470
+                    },
+                    {
+                        "name": "runScript",
+                        "x": -35,
+                        "y": 140,
+                        "h": 90,
+                        "w": 200
+                    },
+                    {
+                        "name": "setExitReason",
+                        "x": -352.36625514403295,
+                        "y": 560,
+                        "h": 90,
+                        "w": 540
+                    }
+                ],
+                "layoutMode": "auto",
+                "type": "graph",
+                "name": "9141771c-368a-4534-a3ae-152b86bedd63",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "ce59fd8e9176033504c46b4a9759b1",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "postProcessingScript": {
+                            "id": "943c8c1f-775b-436a-8fc3-35296bd3cd8b",
+                            "name": "getExitReason",
+                            "description": "gets exit reason from script output",
+                            "body": "var exit = properties.get('exitCode');\n\nscanner.register(\"exitReason=\", function(lineNumber, line) {\n     var value=line.replace(\"exitReason=\",\"\");\n     properties.put(\"exitReason\",value);\n});\n\nif (exit == 0) {\n    properties.put('Status', 'Success');\n}\nelse {\n     properties.put('Status', 'Failure');\n}\n\nscanner.scan();"
+                        },
+                        "commandName": "Shell",
+                        "pluginName": "Shell",
+                        "pluginVersion": 7,
+                        "properties": {
+                            "directoryOffset": "lifecycle",
+                            "shellInterpreter": "",
+                            "scriptBody": "sudo .\/${p:applicationProcess.name}.sh",
+                            "runAsDaemon": "false",
+                            "outputFile": ""
+                        },
+                        "type": "plugin",
+                        "name": "runScript",
+                        "children": []
+                    },
+                    {
+                        "propertyName": "${p:applicationProcess.name}",
+                        "type": "switch",
+                        "name": "if Integrity",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "commandName": "Set Component Environment Property",
+                        "pluginName": "IBM UrbanCode Deploy Environments",
+                        "pluginVersion": 72,
+                        "properties": {
+                            "component": "${p:component.id}",
+                            "environment": "${p:environment.id}",
+                            "application": "",
+                            "name": "Integrity_latest_result",
+                            "value": "${p:runScript\/exitCode}",
+                            "isSecure": "false"
+                        },
+                        "type": "plugin",
+                        "name": "setExitCode",
+                        "children": []
+                    },
+                    {
+                        "allowFailure": false,
+                        "useImpersonation": false,
+                        "showHidden": false,
+                        "impersonationUseSudo": false,
+                        "commandName": "Set Component Environment Property",
+                        "pluginName": "IBM UrbanCode Deploy Environments",
+                        "pluginVersion": 72,
+                        "properties": {
+                            "component": "${p:component.id}",
+                            "environment": "${p:environment.id}",
+                            "application": "",
+                            "name": "Integrity_latest_result_reason",
+                            "value": "${p:runScript\/exitReason}",
+                            "isSecure": "false"
+                        },
+                        "type": "plugin",
+                        "name": "setExitReason",
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ],
+    "genericProcesses": [],
+    "teamMappings": []
+}

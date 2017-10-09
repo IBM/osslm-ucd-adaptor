@@ -1,0 +1,140 @@
+{
+    "name": "remove VNF Package",
+    "description": "Remove the UCD entities of a VNF package",
+    "rootActivity": {
+        "edges": [
+            {
+                "to": "f3a7d08aae4c4e1981e9326b423288",
+                "from": "delComp",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "delApp",
+                "from": "getAppComp",
+                "type": "SUCCESS",
+                "value": ""
+            },
+            {
+                "to": "getAppComp",
+                "type": "ALWAYS",
+                "value": ""
+            },
+            {
+                "to": "delComp",
+                "from": "delApp",
+                "type": "SUCCESS",
+                "value": ""
+            }
+        ],
+        "offsets": [
+            {
+                "name": "f3a7d08aae4c4e1981e9326b423288",
+                "x": -5,
+                "y": 420,
+                "h": 80,
+                "w": 120
+            },
+            {
+                "name": "delComp",
+                "x": 118,
+                "y": 297,
+                "h": 70,
+                "w": 260
+            },
+            {
+                "name": "delApp",
+                "x": -195,
+                "y": 180,
+                "h": 70,
+                "w": 250
+            },
+            {
+                "name": "getAppComp",
+                "x": 118,
+                "y": 110,
+                "h": 70,
+                "w": 330
+            }
+        ],
+        "layoutMode": "manual",
+        "type": "graph",
+        "name": "256ad1c3-66c2-4524-b86a-515b87f056d3",
+        "children": [
+            {
+                "type": "finish",
+                "name": "f3a7d08aae4c4e1981e9326b423288",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Delete Application",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "pluginVersion": 73,
+                "properties": {"application": "${p:appName}"},
+                "type": "plugin",
+                "name": "delApp",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Get Components in Application",
+                "pluginName": "IBM UrbanCode Deploy Applications",
+                "pluginVersion": 73,
+                "properties": {"application": "${p:appName}"},
+                "type": "plugin",
+                "name": "getAppComp",
+                "children": []
+            },
+            {
+                "allowFailure": false,
+                "useImpersonation": false,
+                "showHidden": false,
+                "impersonationUseSudo": false,
+                "commandName": "Delete Component",
+                "pluginName": "IBM UrbanCode Deploy Components",
+                "pluginVersion": 68,
+                "properties": {"component": "${p:getAppComp\/componentNames}"},
+                "type": "plugin",
+                "name": "delComp",
+                "children": []
+            }
+        ]
+    },
+    "properties": [
+        {
+            "name": "contextType",
+            "value": "Resource",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "defaultResourceId",
+            "value": "73c00fed-ae59-4799-b37f-7f7106e64586",
+            "description": "",
+            "secure": false
+        },
+        {
+            "name": "workingDir",
+            "value": "${p:resource\/work.dir}\/${p:process.name}",
+            "description": "",
+            "secure": false
+        }
+    ],
+    "propDefs": [{
+        "name": "appName",
+        "label": "Application Name",
+        "pattern": "",
+        "type": "TEXT",
+        "required": true,
+        "description": "Application Name",
+        "placeholder": ""
+    }],
+    "teamMappings": []
+}

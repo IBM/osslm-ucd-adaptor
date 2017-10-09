@@ -1,0 +1,6 @@
+name: resource::UCD-Flavor::1.0
+description: Flavor resource from UrbanCode Deploy
+resource-manager-type: ucd
+lifecycle:
+- Install
+- Uninstall

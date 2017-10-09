@@ -1,0 +1,79 @@
+{
+"name": "PushDescriptors",
+"description": "pushes artefacts to the management application server",
+"defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+"takesVersion": true,
+"inventoryActionType": "ADD",
+"status": "Active",
+"configActionType": "ADD",
+"active": true,
+"rootActivity": {
+    "edges": [
+        {
+            "to": "79844f194d3841e9238f7cfe0f011f",
+            "from": "pushArtefacts",
+            "type": "SUCCESS",
+            "value": ""
+        },
+        {
+            "to": "pushArtefacts",
+            "type": "ALWAYS",
+            "value": ""
+        }
+    ],
+    "offsets": [
+        {
+            "name": "79844f194d3841e9238f7cfe0f011f",
+            "x": -5,
+            "y": 350,
+            "h": 80,
+            "w": 120
+        },
+        {
+            "name": "pushArtefacts",
+            "x": -75,
+            "y": 180,
+            "h": 70,
+            "w": 260
+        }
+    ],
+    "layoutMode": "auto",
+    "type": "graph",
+    "name": "InstallProcess",
+    "children": [
+        {
+            "type": "finish",
+            "name": "79844f194d3841e9238f7cfe0f011f",
+            "children": []
+        },
+        {
+            "allowFailure": false,
+            "useImpersonation": false,
+            "showHidden": false,
+            "impersonationUseSudo": false,
+            "commandName": "Download Artifacts",
+            "pluginName": "IBM UrbanCode Deploy Versioned File Storage",
+            "pluginVersion": 27,
+            "properties": {
+                "directoryOffset": ".",
+                "artifactSetBaseDir": "",
+                "fileIncludePatterns": "Service-Template\/**\/*",
+                "fileExcludePatterns": "",
+                "syncMode": "true",
+                "fullVerification": "true",
+                "setFileExecuteBits": "false",
+                "verifyFileIntegrity": "false",
+                "versionId": "${p:version.id}",
+                "serverUrl": "${p:server.url}",
+                "compId": "${p:component.id}",
+                "resId": "${p:resource.id}",
+                "charset": "",
+                "label": ""
+            },
+            "type": "plugin",
+            "name": "pushArtefacts",
+            "children": []
+        }
+    ]
+}
+}

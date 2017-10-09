@@ -1,0 +1,31 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+eureka:
+    client:
+        enabled: false
+
+ribbon:
+    eureka:
+        enabled: false
+
+urbancodedeploy:
+    environments:
+        admin@test:
+            ucd-server:
+                url: http://localhost:8480
+                username: admin
+                password: admin
+            ucd-patterns:
+                url: http://localhost:8480
+                username: admin
+                password: openstack

@@ -1,0 +1,15 @@
+{
+  "componentType":"STANDARD",
+  "defaultVersionType": "INCREMENTAL",
+  "importAutomatically": "false",
+  "importAgentType":"inherit",
+  "inheritSystemCleanup": "true",
+  "sourceConfigPlugin": "File System",
+  "properties": {
+    "FileSystemComponentProperties/useNamePattern": "true",
+    "FileSystemComponentProperties/namePattern": "${version}",
+    "FileSystemComponentProperties/nextNumber": "1",
+    "FileSystemComponentProperties/extensions":""
+  },
+  "useVfs": "true"
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "cf4f480c-5a72-4187-abf9-9091e2b23fee",
+    "name": "admin",
+    "displayName": "admin@localstack",
+    "description": "",
+    "cloudProviderId": "49a35c96-a02e-402b-9bc1-79656c9d907a",
+    "type": "AUTH_REALM",
+    "dateCreated": 1481208462039,
+    "readOnly": true,
+    "properties": []
+  },
+  {
+    "id": "a58fd508-26a9-45ed-820e-9ea2c5b48e35",
+    "name": "Demo",
+    "displayName": "Demo@localstack",
+    "description": "",
+    "cloudProviderId": "49a35c96-a02e-402b-9bc1-79656c9d907a",
+    "type": "AUTH_REALM",
+    "dateCreated": 1481208462039,
+    "readOnly": true,
+    "properties": []
+  },
+  {
+    "id": "a818fc95-2521-45d2-9c5e-285f6a1125f9",
+    "name": "Erik",
+    "displayName": "admin@test",
+    "description": "",
+    "cloudProviderId": "49a35c96-a02e-402b-9bc1-79656c9d907a",
+    "type": "AUTH_REALM",
+    "dateCreated": 1482328246793,
+    "readOnly": true,
+    "properties": []
+  },
+    {
+        "id": "1a6e5560-6aac-465b-a3f6-2e53103e8528", 
+        "name": "admin", 
+        "displayName": "admin@DC1", 
+        "description": "", 
+        "cloudProviderId": "626b4f5f-edcf-4736-b35a-cfce3e6edc8b", 
+        "type": "OPENSTACK", 
+        "dateCreated": 1482323847825, 
+        "readOnly": false, 
+        "properties": [
+            {
+                "id": "7bd58946-87f2-4a6c-8808-f0d7ffc9c84d", 
+                "name": "domain", 
+                "value": "Default", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "9456ef2d-a4ba-4123-8290-caa971c75840", 
+                "name": "functionalId", 
+                "value": "admin", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "8fb7ff53-7271-4a89-aec1-b1dd2460ae15", 
+                "name": "functionalPassword", 
+                "value": "****", 
+                "label": "", 
+                "secure": true
+            }
+        ]
+    }, 
+    {
+        "id": "29213a41-c67a-4bc9-acc0-0c711e9814c3", 
+        "name": "admin", 
+        "displayName": "admin@DC2", 
+        "description": "", 
+        "cloudProviderId": "30c51039-c73d-4257-8fcc-922c2010891a", 
+        "type": "OPENSTACK", 
+        "dateCreated": 1482323960393, 
+        "readOnly": false, 
+        "properties": [
+            {
+                "id": "02352cc3-6127-4d5b-b310-bdfdf8e33199", 
+                "name": "domain", 
+                "value": "Default", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "7e525306-f2d6-49ff-a665-ee17f9f92a76", 
+                "name": "functionalId", 
+                "value": "admin", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "982adb0e-5955-4591-a281-5ebb1c9d73ca", 
+                "name": "functionalPassword", 
+                "value": "****", 
+                "label": "", 
+                "secure": true
+            }
+        ]
+    }, 
+    {
+        "id": "25b264df-5c13-48ee-80cc-0484c713d7b5", 
+        "name": "VOD", 
+        "displayName": "VOD@DC2", 
+        "description": "", 
+        "cloudProviderId": "30c51039-c73d-4257-8fcc-922c2010891a", 
+        "type": "OPENSTACK", 
+        "dateCreated": 1484158904396, 
+        "readOnly": false, 
+        "properties": [
+            {
+                "id": "e20e38a2-7187-4528-a35c-f9d163146f20", 
+                "name": "domain", 
+                "value": "Default", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "37c900d9-1d70-4a9b-add7-a2422b8ae9b3", 
+                "name": "functionalId", 
+                "value": "admin", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "940ff22b-a49a-4fbf-aa77-63efcfe1df33", 
+                "name": "functionalPassword", 
+                "value": "****", 
+                "label": "", 
+                "secure": true
+            }
+        ]
+    }, 
+    {
+        "id": "63f92476-2807-44db-b77e-6e371aa5cc27", 
+        "name": "VOD", 
+        "displayName": "VOD@DC1", 
+        "description": "", 
+        "cloudProviderId": "626b4f5f-edcf-4736-b35a-cfce3e6edc8b", 
+        "type": "OPENSTACK", 
+        "dateCreated": 1484158877758, 
+        "readOnly": false, 
+        "properties": [
+            {
+                "id": "02f88dd9-4d28-46c6-846f-1c44d78ff119", 
+                "name": "domain", 
+                "value": "Default", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "759fc019-9514-42b3-ae2e-5e696e0b2fc6", 
+                "name": "functionalId", 
+                "value": "admin", 
+                "label": "", 
+                "secure": false
+            }, 
+            {
+                "id": "2bf392d3-4ddd-4c00-8621-a30623cd97e1", 
+                "name": "functionalPassword", 
+                "value": "****", 
+                "label": "", 
+                "secure": true
+            }
+        ]
+    }
+]

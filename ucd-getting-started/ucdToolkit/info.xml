@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginInfo>
+  <author name="Jochen Kappel">
+    <organization>IBM Germany, TME Solutions Lab</organization>
+    <email>jkappel@de.ibm.com</email>
+    <website/>
+    <bio/>
+  </author>
+
+  <integration type="Automation"/>
+
+  <source url="https://developer.ibm.com/urbancode/plugins/"/>
+
+  <licenses>
+    <license type="Apache v2"/>
+  </licenses>
+
+  <tool-description>Load VNF operations plug-in</tool-description>
+
+ <related-info>
+   <link description="Documentation for IBM UrbanCode Deploy"
+ title="IBM Knowledge Center" type="WEBSITE"
+ url="http://www-01.ibm.com/support/knowledgecenter/SS4GSP/ucd_welcome.html"/>
+ </related-info>
+
+ <release-version>5.0</release-version>
+ <release-notes>
+     <release-note plugin-version="1">
+Initial version, only happy days.
+     </release-note>
+     <release-note plugin-version="2">
+now imports also HEAT templates into UCDP default git repo
+     </release-note>
+     <release-note plugin-version="3">
+component Name not same as application name
+     </release-note>
+     <release-note plugin-version="4">
+pull archive step added
+     </release-note>
+     <release-note plugin-version="5">
+create component step added
+     </release-note>
+ </release-notes>
+</pluginInfo>

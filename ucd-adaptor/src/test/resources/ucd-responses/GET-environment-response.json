@@ -1,0 +1,38 @@
+{
+    "id": "e0fbe26e-53b8-4c1a-bbfc-5304337bbfab", 
+    "name": "Demo-3", 
+    "blueprintName": "c_streamer", 
+    "blueprintUrl": "https://10.0.9.38:8443/landscaper/view/projects?open=admin_67f1f92c_d428_428e_9cdb_41513499ada0-OrionContent/default/Demo.yaml", 
+    "stack_status": "CREATE_COMPLETE", 
+    "stack_status_reason": "Stack CREATE completed successfully", 
+    "creation_time": "2013-12-01T15:37:36Z", 
+    "owner": "admin", 
+    "created_by": "admin", 
+    "regionName": "RegionOne", 
+    "cloudProjectName": "admin@localstack", 
+    "parameters": {
+        "network-id__for__admin_net": "c0556a3b-fef3-43ae-bfd1-a9a45cdea106",
+        "OS::project_id": "7002d3f993f14cff9de225bf7baa2610", 
+        "OS::stack_id": "e0fbe26e-53b8-4c1a-bbfc-5304337bbfab", 
+        "OS::stack_name": "Demo-3", 
+        "availability_zone": "nova", 
+        "key_name": "martin", 
+        "OS::region": "RegionOne",
+        "IBM::UCD::USER": "admin", 
+        "IBM::Cloud::Type": "AUTH_REALM", 
+        "flavor": "m1.small", 
+        "IBM::Cloud": "5582ff0b-f878-4513-b559-73c2429e524e"
+    },
+    "outputs": [
+    	{
+			"output_value": "c0556a3b-fef3-43ae-bfd1-a9a45cdea106",
+			"description": "Id for created network",
+			"output_key": "network-id"
+		},
+		{
+			"output_value": "10.0.1.0",
+			"description": "Ip address for created network",
+			"output_key": "privateIp"
+		}
+	]
+}

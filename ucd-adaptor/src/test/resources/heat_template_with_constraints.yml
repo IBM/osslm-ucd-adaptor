@@ -1,0 +1,48 @@
+heat_template_version: 2013-05-23
+
+description: >
+  Created 1/13/17 by jochen. For Cloud admin@DC1
+
+parameters:
+  key_name:
+    type: string
+    description: 'Key Pair'
+    label: Key Pair
+    default: 'key'
+    constraints:
+      - custom_constraint: nova.keypair
+  networkName:
+    type: string
+    description: 'Network Name'
+    label: Network Name
+    default: 'AAA'
+  routeTarget:
+    type: string
+    description: Router Target
+    label: Route Target
+    default: 'target:64512:1020'
+  subnetCIDR:
+    type: string
+    description: '(Required)'
+    label: Subnet cidr
+    default: '10.0.2.0/24'
+  subnetDefGwIp:
+    type: string
+    description: 'Default Gateway IP address'
+    label: Defautlt Gateway
+    default: '10.0.2.1'
+  ipPoolStart:
+    type: string
+    description: 'IP allocation pool start'
+    label: Ip Pool Start
+    default: '10.0.2.2'
+    constraints:
+        - { allowed_pattern: '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$', description: Must be IP Address }
+  ipPoolEnd:
+    type: string
+    description: 'IP allocation pool end'
+    label: Ip Pool End
+    default: '10.0.2.49'
+    constraints:
+        - { allowed_pattern: '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$', description: Must be IP Address }
+ 

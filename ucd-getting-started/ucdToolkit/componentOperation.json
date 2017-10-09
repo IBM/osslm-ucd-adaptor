@@ -1,0 +1,68 @@
+{
+"configActionType": "ADD",
+"inventoryActionType": "ADD",
+"defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+"takesVersion": false,
+"status": "",
+"active": true,
+"rootActivity": {
+    "edges": [
+        {
+            "to": "FINISH",
+            "from": "execOperationScript",
+            "type": "SUCCESS",
+            "value": ""
+        },
+        {
+            "to": "execOperationScript",
+            "type": "ALWAYS",
+            "value": ""
+        }
+    ],
+    "offsets": [
+        {
+            "name": "FINISH",
+            "x": -5,
+            "y": 420,
+            "h": 80,
+            "w": 120
+        },
+        {
+            "name": "execOperationScript",
+            "x": -92,
+            "y": 210.5,
+            "h": 70,
+            "w": 160
+        }
+    ],
+    "layoutMode": "manual",
+    "type": "graph",
+    "name": "df7e74d5-83ac-4da1-a125-b1c41a57b2c6",
+    "children": [
+        {
+            "type": "finish",
+            "name": "FINISH",
+            "children": []
+        },
+        {
+            "allowFailure": false,
+            "useImpersonation": false,
+            "showHidden": false,
+            "impersonationUseSudo": false,
+            "commandName": "Shell",
+            "pluginName": "Shell",
+            "pluginVersion": 7,
+            "properties": {
+                "directoryOffset": "operations",
+                "shellInterpreter": "",
+                "scriptBody": "",
+                "runAsDaemon": "false",
+                "outputFile": ""
+            },
+            "type": "plugin",
+            "name": "execOperationScript",
+            "children": []
+        }
+    ]
+}
+}

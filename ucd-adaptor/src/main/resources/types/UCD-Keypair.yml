@@ -1,0 +1,6 @@
+name: resource::UCD-Keypair::1.0
+description: Key pair resource from UrbanCode Deploy
+resource-manager-type: ucd
+lifecycle:
+- Install
+- Uninstall

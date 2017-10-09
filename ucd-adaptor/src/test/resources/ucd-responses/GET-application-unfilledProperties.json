@@ -1,0 +1,13 @@
+[
+  {
+    "id": "c373c007-ac38-4f53-a056-0cd8206626d1",
+    "name": "remote_nfs_server_ip",
+    "label": "NFS server IP",
+    "pattern": "",
+    "type": "TEXT",
+    "value": "\"\"",
+    "required": true,
+    "description": "",
+    "placeholder": ""
+  }
+]

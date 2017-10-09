@@ -1,0 +1,164 @@
+[
+  {
+    "id": "m1.large",
+    "name": "m1.large",
+    "vcpus": 4,
+    "ram": 8192,
+    "disk": 80,
+    "swap": "",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://10.0.9.114:8774/v2/7002d3f993f14cff9de225bf7baa2610/flavors/4",
+        "type": null
+      },
+      {
+        "rel": "bookmark",
+        "href": "http://10.0.9.114:8774/7002d3f993f14cff9de225bf7baa2610/flavors/4",
+        "type": null
+      }
+    ],
+    "public": true,
+    "OS-FLV-EXT-DATA:ephemeral": 0,
+    "rxtx_factor": 1,
+    "OS-FLV-DISABLED:disabled": false,
+    "rxtx_quota": null,
+    "rxtx_cap": null,
+    "os-flavor-access:is_public": true
+  },
+  {
+    "id": "m1.medium",
+    "name": "m1.medium",
+    "vcpus": 2,
+    "ram": 4096,
+    "disk": 40,
+    "swap": "",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://10.0.9.114:8774/v2/7002d3f993f14cff9de225bf7baa2610/flavors/3",
+        "type": null
+      },
+      {
+        "rel": "bookmark",
+        "href": "http://10.0.9.114:8774/7002d3f993f14cff9de225bf7baa2610/flavors/3",
+        "type": null
+      }
+    ],
+    "public": true,
+    "OS-FLV-EXT-DATA:ephemeral": 0,
+    "rxtx_factor": 1,
+    "OS-FLV-DISABLED:disabled": false,
+    "rxtx_quota": null,
+    "rxtx_cap": null,
+    "os-flavor-access:is_public": true
+  },
+  {
+    "id": "m1.medium2",
+    "name": "m1.medium2",
+    "vcpus": 1,
+    "ram": 1024,
+    "disk": 40,
+    "swap": "",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://10.0.9.114:8774/v2/7002d3f993f14cff9de225bf7baa2610/flavors/f111ef22-f80d-4859-8131-4a9181bbcdc9",
+        "type": null
+      },
+      {
+        "rel": "bookmark",
+        "href": "http://10.0.9.114:8774/7002d3f993f14cff9de225bf7baa2610/flavors/f111ef22-f80d-4859-8131-4a9181bbcdc9",
+        "type": null
+      }
+    ],
+    "public": true,
+    "OS-FLV-EXT-DATA:ephemeral": 0,
+    "rxtx_factor": 1,
+    "OS-FLV-DISABLED:disabled": false,
+    "rxtx_quota": null,
+    "rxtx_cap": null,
+    "os-flavor-access:is_public": true
+  },
+  {
+    "id": "m1.small",
+    "name": "m1.small",
+    "vcpus": 1,
+    "ram": 2048,
+    "disk": 20,
+    "swap": "",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://10.0.9.114:8774/v2/7002d3f993f14cff9de225bf7baa2610/flavors/2",
+        "type": null
+      },
+      {
+        "rel": "bookmark",
+        "href": "http://10.0.9.114:8774/7002d3f993f14cff9de225bf7baa2610/flavors/2",
+        "type": null
+      }
+    ],
+    "public": true,
+    "OS-FLV-EXT-DATA:ephemeral": 0,
+    "rxtx_factor": 1,
+    "OS-FLV-DISABLED:disabled": false,
+    "rxtx_quota": null,
+    "rxtx_cap": null,
+    "os-flavor-access:is_public": true
+  },
+  {
+    "id": "m1.tiny",
+    "name": "m1.tiny",
+    "vcpus": 1,
+    "ram": 512,
+    "disk": 1,
+    "swap": "",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://10.0.9.114:8774/v2/7002d3f993f14cff9de225bf7baa2610/flavors/1",
+        "type": null
+      },
+      {
+        "rel": "bookmark",
+        "href": "http://10.0.9.114:8774/7002d3f993f14cff9de225bf7baa2610/flavors/1",
+        "type": null
+      }
+    ],
+    "public": true,
+    "OS-FLV-EXT-DATA:ephemeral": 0,
+    "rxtx_factor": 1,
+    "OS-FLV-DISABLED:disabled": false,
+    "rxtx_quota": null,
+    "rxtx_cap": null,
+    "os-flavor-access:is_public": true
+  },
+  {
+    "id": "m1.xlarge",
+    "name": "m1.xlarge",
+    "vcpus": 8,
+    "ram": 16384,
+    "disk": 160,
+    "swap": "",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://10.0.9.114:8774/v2/7002d3f993f14cff9de225bf7baa2610/flavors/5",
+        "type": null
+      },
+      {
+        "rel": "bookmark",
+        "href": "http://10.0.9.114:8774/7002d3f993f14cff9de225bf7baa2610/flavors/5",
+        "type": null
+      }
+    ],
+    "public": true,
+    "OS-FLV-EXT-DATA:ephemeral": 0,
+    "rxtx_factor": 1,
+    "OS-FLV-DISABLED:disabled": false,
+    "rxtx_quota": null,
+    "rxtx_cap": null,
+    "os-flavor-access:is_public": true
+  }
+]

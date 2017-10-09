@@ -1,0 +1,72 @@
+[
+  {
+    "name": "xenial-server-cloudimg-amd64-disk1",
+    "category": "compute",
+    "id": "1edd223c-7d3d-4bbb-9a76-4c4ef526ba0b",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "VLC_NFS_plain_no_extra_configs",
+    "category": "compute",
+    "id": "faf1184c-7aab-424b-8b32-34b048687e91",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "Loadbalancer_nprobe_bc",
+    "category": "compute",
+    "id": "e68f3cc2-c779-44c3-935a-b10e2dcc6235",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "Haproxy_nProbe_BC_20gb",
+    "category": "compute",
+    "id": "04b7c59b-8d66-4d16-90a0-589ddcad92ce",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "NFS-server-image-1nic",
+    "category": "compute",
+    "id": "1f58d3d7-654d-4c64-a4c9-f8c3abf1e46c",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "opnsense 3-int NAT",
+    "category": "compute",
+    "id": "167bbd89-c50c-4cdd-93ba-678fdbc4e265",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "opnsense 3-int",
+    "category": "compute",
+    "id": "7b558588-c154-490d-99f9-881c8fdf4c9a",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "opnsense upgraded",
+    "category": "compute",
+    "id": "7ff19e64-389d-4c0c-8f02-2fb64d8fe55b",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "xenial_2net",
+    "category": "compute",
+    "id": "b3d276be-6d63-4bea-8257-643cffd131f3",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  },
+  {
+    "name": "xenial",
+    "category": "compute",
+    "id": "51ed7069-b3e2-4429-8381-89f1ff9f3b7d",
+    "subcategory": "generic",
+    "icon": "images/editor/Instance_Generic.png"
+  }
+]

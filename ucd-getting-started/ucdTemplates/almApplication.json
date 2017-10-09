@@ -1,0 +1,604 @@
+{
+    "name": "almApplication",
+    "description": "Mother of all ALM applications",
+    "applicationProcessList": [
+        {
+            "name": "Configure",
+            "description": "configures an application component",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "d6925c212162ffa8365818674da91b",
+                        "from": "be0953918143e84190a43f9c4be103",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "be0953918143e84190a43f9c4be103",
+                        "type": "ALWAYS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "x": -67.24489795918367,
+                        "y": 123.06122448979593,
+                        "h": 70,
+                        "w": 410
+                    },
+                    {
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "608f8e50-55fd-4cf8-9479-e6ae7a25d36e",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "children": []
+                    },
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "properties": [
+                            {
+                                "name": "activity.componentProcess.name",
+                                "value": "doOperation"
+                            },
+                            {
+                                "name": "maxCompIteration",
+                                "value": "10"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            }
+                        ],
+                        "type": "multiComponentEnvironmentIterator",
+                        "children": [{
+                            "properties": [{
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            }],
+                            "type": "componentEnvironmentIterator",
+                            "name": "46850984768324ce574642a8c633a3",
+                            "children": [{
+                                "type": "operationalProcessFilter",
+                                "name": "0a70c5c3-0505-458f-aa1f-a9efef1b13f3",
+                                "children": [{
+                                    "componentProcessName": "doOperation",
+                                    "allowFailure": false,
+                                    "properties": {"activity.componentProcess.name": "doOperation"},
+                                    "type": "componentProcess",
+                                    "name": "configure",
+                                    "children": []
+                                }]
+                            }]
+                        }]
+                    }
+                ]
+            },
+            "propDefs": [],
+            "versionPresets": []
+        },
+        {
+            "name": "Integrity",
+            "description": "checks integrity of an application component",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "d6925c212162ffa8365818674da91b",
+                        "from": "be0953918143e84190a43f9c4be103",
+                        "type": "SUCCESS",
+                        "value": ""
+                    },
+                    {
+                        "to": "be0953918143e84190a43f9c4be103",
+                        "type": "ALWAYS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "x": -67.24489795918367,
+                        "y": 123.06122448979593,
+                        "h": 70,
+                        "w": 410
+                    },
+                    {
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "23c0f179-2544-42aa-af58-e0f7797c2293",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "children": []
+                    },
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "properties": [
+                            {
+                                "name": "activity.componentProcess.name",
+                                "value": "doOperation"
+                            },
+                            {
+                                "name": "maxCompIteration",
+                                "value": "10"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            }
+                        ],
+                        "type": "multiComponentEnvironmentIterator",
+                        "children": [{
+                            "properties": [{
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            }],
+                            "type": "componentEnvironmentIterator",
+                            "name": "245311f36adfbda93b725f40a57d79",
+                            "children": [{
+                                "type": "operationalProcessFilter",
+                                "name": "666d36ab-ed48-4d65-9544-8b2015d02df6",
+                                "children": [{
+                                    "componentProcessName": "doOperation",
+                                    "allowFailure": false,
+                                    "properties": {"activity.componentProcess.name": "doOperation"},
+                                    "type": "componentProcess",
+                                    "name": "integrity",
+                                    "children": []
+                                }]
+                            }]
+                        }]
+                    }
+                ]
+            },
+            "propDefs": [],
+            "versionPresets": []
+        },
+        {
+            "name": "Reconfigure",
+            "description": "re-configures an application component",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "d48380d267315efaab676c35d126c3",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "d6925c212162ffa8365818674da91b",
+                        "from": "d48380d267315efaab676c35d126c3",
+                        "type": "SUCCESS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    },
+                    {
+                        "name": "d48380d267315efaab676c35d126c3",
+                        "x": 162.75510204081633,
+                        "y": 90,
+                        "h": 70,
+                        "w": 270
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "76a569bc-0aad-4773-99fc-180e94fb56e4",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "children": []
+                    },
+                    {
+                        "name": "d48380d267315efaab676c35d126c3",
+                        "properties": [
+                            {
+                                "name": "activity.componentProcess.name",
+                                "value": "Reconfigure"
+                            },
+                            {
+                                "name": "maxCompIteration",
+                                "value": "100"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            }
+                        ],
+                        "type": "multiComponentEnvironmentIterator",
+                        "children": [{
+                            "properties": [{
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            }],
+                            "type": "componentEnvironmentIterator",
+                            "name": "0e374710b2b4054f630a09d46cd4bb",
+                            "children": [{
+                                "status": "Active",
+                                "type": "inventoryVersionDiff",
+                                "name": "728e5711-70bd-4baf-98c5-310a8125a892",
+                                "children": [{
+                                    "componentProcessName": "Reconfigure",
+                                    "allowFailure": false,
+                                    "properties": {"activity.componentProcess.name": "Reconfigure"},
+                                    "type": "componentProcess",
+                                    "name": "Reconfigure",
+                                    "children": []
+                                }]
+                            }]
+                        }]
+                    }
+                ]
+            },
+            "propDefs": [],
+            "versionPresets": []
+        },
+        {
+            "name": "Start",
+            "description": "starts an application component",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "be0953918143e84190a43f9c4be103",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "d6925c212162ffa8365818674da91b",
+                        "from": "be0953918143e84190a43f9c4be103",
+                        "type": "SUCCESS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "x": -67.24489795918367,
+                        "y": 123.06122448979593,
+                        "h": 70,
+                        "w": 410
+                    },
+                    {
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "5fb1f089-2340-4dd4-976c-4baf3dee964b",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "children": []
+                    },
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "properties": [
+                            {
+                                "name": "activity.componentProcess.name",
+                                "value": "doOperation"
+                            },
+                            {
+                                "name": "maxCompIteration",
+                                "value": "10"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            }
+                        ],
+                        "type": "multiComponentEnvironmentIterator",
+                        "children": [{
+                            "properties": [{
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            }],
+                            "type": "componentEnvironmentIterator",
+                            "name": "fc3cfd74a8a9fbcb884c562836c85d",
+                            "children": [{
+                                "type": "operationalProcessFilter",
+                                "name": "7c664ea7-55aa-4350-8388-2bbf52e6c30e",
+                                "children": [{
+                                    "componentProcessName": "doOperation",
+                                    "allowFailure": false,
+                                    "properties": {"activity.componentProcess.name": "doOperation"},
+                                    "type": "componentProcess",
+                                    "name": "start",
+                                    "children": []
+                                }]
+                            }]
+                        }]
+                    }
+                ]
+            },
+            "propDefs": [],
+            "versionPresets": []
+        },
+        {
+            "name": "Stop",
+            "description": "stops an application component",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "be0953918143e84190a43f9c4be103",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "d6925c212162ffa8365818674da91b",
+                        "from": "be0953918143e84190a43f9c4be103",
+                        "type": "SUCCESS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "x": -67.24489795918367,
+                        "y": 123.06122448979593,
+                        "h": 70,
+                        "w": 410
+                    },
+                    {
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "f4adffcc-a59c-477a-988c-463421c06433",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "d6925c212162ffa8365818674da91b",
+                        "children": []
+                    },
+                    {
+                        "name": "be0953918143e84190a43f9c4be103",
+                        "properties": [
+                            {
+                                "name": "activity.componentProcess.name",
+                                "value": "doOperation"
+                            },
+                            {
+                                "name": "maxCompIteration",
+                                "value": "10"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            }
+                        ],
+                        "type": "multiComponentEnvironmentIterator",
+                        "children": [{
+                            "properties": [{
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            }],
+                            "type": "componentEnvironmentIterator",
+                            "name": "4d0e299e6d186d7b29ed4937e1df40",
+                            "children": [{
+                                "type": "operationalProcessFilter",
+                                "name": "8c6fce9c-e98e-40d0-a67b-aa40b616b094",
+                                "children": [{
+                                    "componentProcessName": "doOperation",
+                                    "allowFailure": false,
+                                    "properties": {"activity.componentProcess.name": "doOperation"},
+                                    "type": "componentProcess",
+                                    "name": "stop",
+                                    "children": []
+                                }]
+                            }]
+                        }]
+                    }
+                ]
+            },
+            "propDefs": [],
+            "versionPresets": []
+        },
+        {
+            "name": "__pushArtefacts",
+            "description": "Push artefacts to management servers (orchestrator\/configurator\/...)",
+            "inventoryManagementType": "AUTOMATIC",
+            "offlineAgentHandling": "PRE_EXECUTION_CHECK",
+            "rootActivity": {
+                "edges": [
+                    {
+                        "to": "272f0e5eb57dc8bd573b20aa41edba",
+                        "type": "ALWAYS",
+                        "value": ""
+                    },
+                    {
+                        "to": "599c0886cf57393f359440e4ea2214",
+                        "from": "272f0e5eb57dc8bd573b20aa41edba",
+                        "type": "SUCCESS",
+                        "value": ""
+                    }
+                ],
+                "offsets": [
+                    {
+                        "name": "599c0886cf57393f359440e4ea2214",
+                        "x": -5,
+                        "y": 420,
+                        "h": 80,
+                        "w": 120
+                    },
+                    {
+                        "name": "272f0e5eb57dc8bd573b20aa41edba",
+                        "x": -236.53061224489798,
+                        "y": 230.20408163265307,
+                        "h": 70,
+                        "w": 270
+                    }
+                ],
+                "layoutMode": "manual",
+                "type": "graph",
+                "name": "98670ab2-6a29-49d4-8e1e-197254b44a1f",
+                "children": [
+                    {
+                        "type": "finish",
+                        "name": "599c0886cf57393f359440e4ea2214",
+                        "children": []
+                    },
+                    {
+                        "name": "272f0e5eb57dc8bd573b20aa41edba",
+                        "properties": [
+                            {
+                                "name": "activity.componentProcess.name",
+                                "value": "__pushArtefacts"
+                            },
+                            {
+                                "name": "maxCompIteration",
+                                "value": "100"
+                            },
+                            {
+                                "name": "maxIteration",
+                                "value": "-1"
+                            },
+                            {
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            },
+                            {
+                                "name": "failFast",
+                                "value": "false"
+                            }
+                        ],
+                        "type": "multiComponentEnvironmentIterator",
+                        "children": [{
+                            "properties": [{
+                                "name": "runOnlyOnFirst",
+                                "value": "false"
+                            }],
+                            "type": "componentEnvironmentIterator",
+                            "name": "391235104302486ed96ade5113c589",
+                            "children": [{
+                                "status": "Active",
+                                "type": "inventoryVersionDiff",
+                                "name": "f849bae5-aea8-4bf6-86c6-802564c28920",
+                                "children": [{
+                                    "componentProcessName": "__pushArtefacts",
+                                    "allowFailure": false,
+                                    "properties": {"activity.componentProcess.name": "__pushArtefacts"},
+                                    "type": "componentProcess",
+                                    "name": "pushArtefacts",
+                                    "children": []
+                                }]
+                            }]
+                        }]
+                    }
+                ]
+            },
+            "propDefs": [
+                {
+                    "name": "artDir",
+                    "label": "Source Subdirectory",
+                    "pattern": "",
+                    "type": "TEXT",
+                    "value": "lifecycle",
+                    "required": true,
+                    "description": "Subdirectory for the artefacts in the repository",
+                    "placeholder": ""
+                },
+                {
+                    "name": "workDir",
+                    "label": "Target directory",
+                    "pattern": "",
+                    "type": "TEXT",
+                    "required": true,
+                    "description": "Target directory for the artefacts on the management server",
+                    "placeholder": ""
+                }
+            ],
+            "versionPresets": []
+        }
+    ],
+    "genericProcesses": [],
+    "tagRequirements": [],
+    "enforceCompleteSnapshots": false,
+    "environmentTemplates": [],
+    "propDefs": [],
+    "statuses": []
+}
