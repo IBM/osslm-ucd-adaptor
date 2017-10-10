@@ -1,5 +1,5 @@
 # Resource Manager adaptor for Urban Code Deploy (UCD)
-For a more detailed overview and context of this project see [main Readme page]( https://github.com/IBM/open-source-service-lifecycle-mgmt/README.md)
+For a more detailed overview and context of this project see [main Readme page]( https://github.com/IBM/open-source-service-lifecycle-mgmt/
 
 This project provides a resource manager (RM) for ALM 1.1 based on UCD, see [Urban Code Deploy](https://developer.ibm.com/urbancode/products/urbancode-deploy/).
 
